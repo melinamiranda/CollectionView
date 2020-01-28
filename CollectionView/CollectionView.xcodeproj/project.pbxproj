@@ -13,6 +13,7 @@
 		FFB3A19023E0C2CB00143420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB3A18E23E0C2CB00143420 /* Main.storyboard */; };
 		FFB3A19223E0C2CD00143420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB3A19123E0C2CD00143420 /* Assets.xcassets */; };
 		FFB3A19523E0C2CD00143420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB3A19323E0C2CD00143420 /* LaunchScreen.storyboard */; };
+		FFB3A19D23E0C3A900143420 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3A19C23E0C3A900143420 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FFB3A19123E0C2CD00143420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB3A19423E0C2CD00143420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB3A19623E0C2CD00143420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB3A19C23E0C3A900143420 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FFB3A18823E0C2CB00143420 /* AppDelegate.swift */,
 				FFB3A18A23E0C2CB00143420 /* SceneDelegate.swift */,
 				FFB3A18C23E0C2CB00143420 /* ViewController.swift */,
+				FFB3A19C23E0C3A900143420 /* CollectionViewCell.swift */,
 				FFB3A18E23E0C2CB00143420 /* Main.storyboard */,
 				FFB3A19123E0C2CD00143420 /* Assets.xcassets */,
 				FFB3A19323E0C2CD00143420 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				FFB3A18D23E0C2CB00143420 /* ViewController.swift in Sources */,
 				FFB3A18923E0C2CB00143420 /* AppDelegate.swift in Sources */,
+				FFB3A19D23E0C3A900143420 /* CollectionViewCell.swift in Sources */,
 				FFB3A18B23E0C2CB00143420 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
