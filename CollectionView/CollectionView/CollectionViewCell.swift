@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
-    @IBOutlet weak var labelText: UILabel!
-    func showItems(items: item){
-        labelText.text = items.label
+class CollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var firstItem: UILabel!
+    
+    func showItems(itemsArray: items){
+        firstItem.text = itemsArray.item
     }
 }

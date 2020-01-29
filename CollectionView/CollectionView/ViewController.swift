@@ -8,29 +8,37 @@
 
 import UIKit
 
-struct item {
-    var label: String
+struct items {
+    var item: String
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var items = [item]()
+    var itemsArray = [items]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        items = [
-        item(label: "Text inside the collectionview cell")
+        
+        collectionView.dataSource = self
+        
+        itemsArray = [
+            items(item: "First item inside the collection"),
+            items(item: "Second item inside the collection view"),
+            items(item: "Third item inside the collection view"),
+            items(item: "Four item inside the collection view"),
+            items(item: "Fifth item inside the collection view"),
         ]
+
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return itemsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.showItems(items: item) = items[indexPath.item]
+        cell.showItems(itemsArray: itemsArray[indexPath.item])
         return cell
     }
     
