@@ -45,8 +45,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         cell.showItems(itemsArray: itemsArray[indexPath.item])
         return cell
     }
-    
-   /* func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         switch kind {
             case UICollectionView.elementKindSectionHeader:
@@ -58,5 +58,5 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             default:
                 print("error")
         }
-    }*/
+    }
 }

@@ -12,7 +12,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
     
     @IBOutlet weak var firstItem: UILabel!
- 
+
     func showItems(itemsArray: items){
         firstItem.text = itemsArray.item
     }
