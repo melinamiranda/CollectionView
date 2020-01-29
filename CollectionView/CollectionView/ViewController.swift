@@ -28,8 +28,12 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             items(item: "Third item inside the collection view"),
             items(item: "Four item inside the collection view"),
             items(item: "Fifth item inside the collection view"),
+            items(item: "Sixth item inside the collection view"),
+            items(item: "Seventh item inside the collection view"),
+            items(item: "Eighth item inside the collection view"),
+            items(item: "Ninth item inside the collection view"),
         ]
-
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,5 +46,17 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
+   /* func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+            case UICollectionView.elementKindSectionHeader:
+                let reuseViewHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
+                return reuseViewHeader
+            case UICollectionView.elementKindSectionFooter:
+                let reuseViewFooter =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
+                return reuseViewFooter
+            default:
+                print("error")
+        }
+    }*/
 }
-
