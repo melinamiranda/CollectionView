@@ -12,10 +12,15 @@ struct items {
     var item: String
 }
 
+struct images {
+    var logo: UIImage!
+}
+
 class ViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var itemsArray = [items]()
+    var imagesArray = [images]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +36,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             items(item: "Sixth item inside the collection view"),
             items(item: "Seventh item inside the collection view"),
             items(item: "Eighth item inside the collection view"),
-            items(item: "Ninth item inside the collection view"),
+        ]
+        
+        imagesArray = [
+            images(logo: UIImage(named: "logo"))
         ]
         
     }
@@ -41,12 +49,24 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        if let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell{
         cell.showItems(itemsArray: itemsArray[indexPath.item])
         return cell
+        }
+        else { let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellImage", for: indexPath) as! CollectionViewCellImage
+            cell.showImage(imagesArray: imagesArray[indexPath.item])
+        return cell
+        }
     }
 
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    
+    
+    
+    
+    
+    
+    
+   /* func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         switch kind {
             case UICollectionView.elementKindSectionHeader:
@@ -56,7 +76,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
                 let reuseViewFooter =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
                 return reuseViewFooter
             default:
-                print("error")
         }
-    }
+    }*/
 }
