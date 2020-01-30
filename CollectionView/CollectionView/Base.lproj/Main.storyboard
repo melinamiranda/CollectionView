@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62x-nt-LQQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="218"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="318"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ujt-Zo-cJR">
                                     <size key="itemSize" width="331" height="122"/>
@@ -61,15 +61,15 @@
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="DjU-Ly-2eH"/>
                                                 <constraint firstItem="WCu-2m-XiP" firstAttribute="leading" secondItem="dvo-wm-Of4" secondAttribute="leading" constant="8" id="Gc2-27-klt"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="leading" secondItem="WCu-2m-XiP" secondAttribute="trailing" constant="8" id="Gkb-zS-Hba"/>
-                                                <constraint firstItem="O9m-tD-zVn" firstAttribute="centerX" secondItem="dvo-wm-Of4" secondAttribute="centerX" id="Kjm-LB-OBA"/>
+                                                <constraint firstItem="O9m-tD-zVn" firstAttribute="centerX" secondItem="dvo-wm-Of4" secondAttribute="centerX" id="LAg-gw-SZS"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="height" secondItem="dvo-wm-Of4" secondAttribute="height" multiplier="3:4" id="MqG-W2-g45"/>
                                                 <constraint firstItem="r8o-LZ-8a6" firstAttribute="width" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.285498" id="P54-qC-xQK"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r8o-LZ-8a6" secondAttribute="bottom" constant="8" id="Twh-pS-ueB"/>
+                                                <constraint firstItem="r8o-LZ-8a6" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="UAe-Sc-Uwf"/>
+                                                <constraint firstItem="WCu-2m-XiP" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="ULK-ZL-IrY"/>
                                                 <constraint firstAttribute="trailing" secondItem="r8o-LZ-8a6" secondAttribute="trailing" constant="8" id="W28-fZ-Yxq"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="dSU-iP-ggC"/>
-                                                <constraint firstItem="r8o-LZ-8a6" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="jbw-Xp-Irs"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WCu-2m-XiP" secondAttribute="bottom" constant="8" id="kl0-4l-rcP"/>
-                                                <constraint firstItem="WCu-2m-XiP" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="pUU-zC-Y6d"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="O9m-tD-zVn" secondAttribute="bottom" constant="8" id="rPT-Is-R75"/>
                                                 <constraint firstItem="r8o-LZ-8a6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="rZf-Xo-M5C"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="width" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="1:3" id="u8W-Q3-RpJ"/>
@@ -92,7 +92,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="62x-nt-LQQ" secondAttribute="trailing" id="8q8-SO-84I"/>
                             <constraint firstItem="62x-nt-LQQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YsV-5v-SQ8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="62x-nt-LQQ" secondAttribute="bottom" constant="600" id="m9Q-92-kRY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="62x-nt-LQQ" secondAttribute="bottom" constant="500" id="m9Q-92-kRY"/>
                             <constraint firstItem="62x-nt-LQQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tPL-qF-NP2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

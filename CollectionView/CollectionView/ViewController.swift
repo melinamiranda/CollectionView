@@ -27,6 +27,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
             item(label: "Instagram", image: UIImage(named: "InstagramLogo"),url: "https://www.instagram.com"),
             item(label: "Linkedin", image: UIImage(named: "LinkedinLogo"), url: "https://www.linkedin.com"),
+            item(label: "Twitter", image: UIImage(named: "TwitterLogo"), url: "https://www.twitter.com"),
         ]
         
     }
