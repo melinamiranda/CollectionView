@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62x-nt-LQQ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62x-nt-LQQ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="218"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ujt-Zo-cJR">
@@ -27,28 +27,32 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CollectionViewCell" id="Thw-Eh-Lnk" customClass="CollectionViewCell" customModule="CollectionView" customModuleProvider="target">
-                                        <rect key="frame" x="41.5" y="8" width="331" height="122"/>
+                                        <rect key="frame" x="40" y="8" width="334.5" height="148.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="dvo-wm-Of4">
-                                            <rect key="frame" x="0.0" y="0.0" width="331" height="122"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="334.5" height="148.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCu-2m-XiP">
-                                                    <rect key="frame" x="8" y="52.5" width="94.5" height="17"/>
+                                                    <rect key="frame" x="8" y="66" width="95.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-tD-zVn">
-                                                    <rect key="frame" x="110.5" y="15.5" width="110" height="91.5"/>
+                                                    <rect key="frame" x="111.5" y="18.5" width="111.5" height="111.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="O9m-tD-zVn" secondAttribute="height" multiplier="1:1" id="4za-CW-Amt"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-LZ-8a6">
-                                                    <rect key="frame" x="228.5" y="46" width="94.5" height="30"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <rect key="frame" x="231" y="60.5" width="95.5" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="Visit Website"/>
+                                                    <connections>
+                                                        <action selector="openURL:" destination="Thw-Eh-Lnk" eventType="touchUpInside" id="jcc-Vm-kDm"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -59,6 +63,7 @@
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="leading" secondItem="WCu-2m-XiP" secondAttribute="trailing" constant="8" id="Gkb-zS-Hba"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="centerX" secondItem="dvo-wm-Of4" secondAttribute="centerX" id="Kjm-LB-OBA"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="height" secondItem="dvo-wm-Of4" secondAttribute="height" multiplier="3:4" id="MqG-W2-g45"/>
+                                                <constraint firstItem="r8o-LZ-8a6" firstAttribute="width" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.285498" id="P54-qC-xQK"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r8o-LZ-8a6" secondAttribute="bottom" constant="8" id="Twh-pS-ueB"/>
                                                 <constraint firstAttribute="trailing" secondItem="r8o-LZ-8a6" secondAttribute="trailing" constant="8" id="W28-fZ-Yxq"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="dSU-iP-ggC"/>
@@ -71,9 +76,8 @@
                                                 <constraint firstItem="WCu-2m-XiP" firstAttribute="width" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.285498" id="vep-vX-brb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="331" height="122"/>
                                         <connections>
-                                            <outlet property="button" destination="r8o-LZ-8a6" id="lYs-nc-0G1"/>
+                                            <outlet property="button" destination="r8o-LZ-8a6" id="eBp-Xf-EuK"/>
                                             <outlet property="imageView" destination="O9m-tD-zVn" id="utc-ml-C0J"/>
                                             <outlet property="labelName" destination="WCu-2m-XiP" id="cFr-xD-BNJ"/>
                                         </connections>

@@ -11,6 +11,7 @@ import UIKit
 struct item {
     var label: String
     var image: UIImage!
+    var url: String
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource {
@@ -23,9 +24,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         collectionView.dataSource = self
         itemsArray = [
-            item(label: "Facebook", image: UIImage(named: "FacebookLogo")),
-
+            item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
+            item(label: "Instagram", image: UIImage(named: "InstagramLogo"),url: "https://www.instagram.com"),
+            item(label: "Linkedin", image: UIImage(named: "LinkedinLogo"), url: "http://linkedin.com"),
         ]
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -34,6 +37,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        cell.urlString = itemsArray[indexPath.item].url
         cell.showItems(items: itemsArray[indexPath.item])
         return cell
    

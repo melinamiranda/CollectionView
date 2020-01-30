@@ -14,9 +14,14 @@ class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var button: UIButton!
+    var urlString = ""
+    @IBAction func openURL(_ sender: Any) {
+        let url = URL(string: urlString)
+        url.
+        UIApplication.shared.canOpenURL(url!)
+    }
     
-    var imagesArray = [UIImage]()
-    func showItems(items: item){
+    func showItems(items: item) {
         labelName.text = items.label
         imageView.image = items.image
     }
