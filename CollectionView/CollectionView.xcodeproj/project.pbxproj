@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF2D897823E3163B006D196E /* CollectionViewCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2D897723E3163B006D196E /* CollectionViewCellImage.swift */; };
 		FFB3A18923E0C2CB00143420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3A18823E0C2CB00143420 /* AppDelegate.swift */; };
 		FFB3A18B23E0C2CB00143420 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3A18A23E0C2CB00143420 /* SceneDelegate.swift */; };
 		FFB3A18D23E0C2CB00143420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3A18C23E0C2CB00143420 /* ViewController.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF2D897723E3163B006D196E /* CollectionViewCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellImage.swift; sourceTree = "<group>"; };
 		FFB3A18523E0C2CB00143420 /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB3A18823E0C2CB00143420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB3A18A23E0C2CB00143420 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				FFB3A18A23E0C2CB00143420 /* SceneDelegate.swift */,
 				FFB3A18C23E0C2CB00143420 /* ViewController.swift */,
 				FFB3A19C23E0C3A900143420 /* CollectionViewCell.swift */,
-				FF2D897723E3163B006D196E /* CollectionViewCellImage.swift */,
 				FFB3A18E23E0C2CB00143420 /* Main.storyboard */,
 				FFB3A19123E0C2CD00143420 /* Assets.xcassets */,
 				FFB3A19323E0C2CD00143420 /* LaunchScreen.storyboard */,
@@ -144,7 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2D897823E3163B006D196E /* CollectionViewCellImage.swift in Sources */,
 				FFB3A18D23E0C2CB00143420 /* ViewController.swift in Sources */,
 				FFB3A18923E0C2CB00143420 /* AppDelegate.swift in Sources */,
 				FFB3A19D23E0C3A900143420 /* CollectionViewCell.swift in Sources */,

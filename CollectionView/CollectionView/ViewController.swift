@@ -8,40 +8,24 @@
 
 import UIKit
 
-struct items {
-    var item: String
-}
-
-struct images {
-    var logo: UIImage!
+struct item {
+    var label: String
+    var image: UIImage!
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var itemsArray = [items]()
-    var imagesArray = [images]()
+    var itemsArray = [item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.dataSource = self
-        
         itemsArray = [
-            items(item: "First item inside the collection"),
-            items(item: "Second item inside the collection view"),
-            items(item: "Third item inside the collection view"),
-            items(item: "Four item inside the collection view"),
-            items(item: "Fifth item inside the collection view"),
-            items(item: "Sixth item inside the collection view"),
-            items(item: "Seventh item inside the collection view"),
-            items(item: "Eighth item inside the collection view"),
+            item(label: "Facebook", image: UIImage(named: "FacebookLogo")),
+
         ]
-        
-        imagesArray = [
-            images(logo: UIImage(named: "logo"))
-        ]
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,33 +33,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell{
-        cell.showItems(itemsArray: itemsArray[indexPath.item])
+        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        cell.showItems(items: itemsArray[indexPath.item])
         return cell
-        }
-        else { let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellImage", for: indexPath) as! CollectionViewCellImage
-            cell.showImage(imagesArray: imagesArray[indexPath.item])
-        return cell
-        }
+   
     }
-
-    
-    
-    
-    
-    
-    
-    
-   /* func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        switch kind {
-            case UICollectionView.elementKindSectionHeader:
-                let reuseViewHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
-                return reuseViewHeader
-            case UICollectionView.elementKindSectionFooter:
-                let reuseViewFooter =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
-                return reuseViewFooter
-            default:
-        }
-    }*/
 }

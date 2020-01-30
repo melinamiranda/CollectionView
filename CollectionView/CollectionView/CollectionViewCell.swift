@@ -11,9 +11,13 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
     
-    @IBOutlet weak var firstItem: UILabel!
-
-    func showItems(itemsArray: items){
-        firstItem.text = itemsArray.item
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var button: UIButton!
+    
+    var imagesArray = [UIImage]()
+    func showItems(items: item){
+        labelName.text = items.label
+        imageView.image = items.image
     }
 }
