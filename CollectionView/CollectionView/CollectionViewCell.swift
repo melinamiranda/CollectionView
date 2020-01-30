@@ -17,8 +17,8 @@ class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
     var urlString = ""
     @IBAction func openURL(_ sender: Any) {
         let url = URL(string: urlString)
-        url.
-        UIApplication.shared.canOpenURL(url!)
+        print(urlString)
+        UIApplication.shared.openURL(url!)
     }
     
     func showItems(items: item) {

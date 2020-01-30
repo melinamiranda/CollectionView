@@ -26,7 +26,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         itemsArray = [
             item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
             item(label: "Instagram", image: UIImage(named: "InstagramLogo"),url: "https://www.instagram.com"),
-            item(label: "Linkedin", image: UIImage(named: "LinkedinLogo"), url: "http://linkedin.com"),
+            item(label: "Linkedin", image: UIImage(named: "LinkedinLogo"), url: "https://www.linkedin.com"),
         ]
         
     }
