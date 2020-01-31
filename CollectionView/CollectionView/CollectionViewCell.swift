@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
+class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var button: UIButton!
     var urlString = ""
+    
     @IBAction func openURL(_ sender: Any) {
         let url = URL(string: urlString)
         UIApplication.shared.open(url!, options: [:], completionHandler: nil)
