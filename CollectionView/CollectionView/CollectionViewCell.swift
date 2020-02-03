@@ -18,18 +18,22 @@ class CollectionViewCell: UICollectionViewCell, SFSafariViewControllerDelegate {
     var urlString = ""
     
     @IBAction func openURL(_ sender: Any) {
-
+        let vc = UIViewController()
         let url = URL(string: urlString)
         let safariVC = SFSafariViewController(url: url!)
         safariVC.delegate = self
-        safariVC.modalPresentationStyle = .fullScreen
         safariVC.dismissButtonStyle = .close
-        
-       // UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        safariVC.modalPresentationStyle = .fullScreen
+        vc.present(safariVC, animated: true, completion: nil)
     }
     
     func showItems(items: item) {
         labelName.text = items.label
         imageView.image = items.image
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        let vc = UIViewController()
+        vc.dismiss(animated: true, completion: nil)
     }
 }

@@ -45,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
         ]
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewV {
         return itemsArray.count
