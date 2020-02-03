@@ -24,6 +24,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var collectionViewH: UICollectionView!
     var itemsArray = [item]()
     var itemsImageArray = [itemH]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,10 +42,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
-
+            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
         ]
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewV {
         return itemsArray.count
@@ -53,13 +54,12 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             return itemsImageArray.count
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == collectionViewV {
         let cell =  collectionViewV.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.urlString = itemsArray[indexPath.item].url
-        cell.showItems(items: itemsArray[indexPath.item])
-        return cell
+            cell.urlString = itemsArray[indexPath.item].url
+            cell.showItems(items: itemsArray[indexPath.item])
+            return cell
         }
         else {
             let cell = collectionViewH.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellH", for: indexPath) as! CollectionViewCellH
