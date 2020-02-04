@@ -20,10 +20,10 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var button: UIButton!
     var delegate:CollectionViewCellDelegate?
     
-    @IBAction func openURL(_ sender: Any) {
-    }
+    @IBAction func openURL(_ sender: Any) {}
     
     func showItems(items: item) {
+        
         let url = URL(string: items.url)
         delegate?.passURL(url: url!)
         labelName.text = items.label

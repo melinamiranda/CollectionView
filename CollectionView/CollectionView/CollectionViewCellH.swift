@@ -15,19 +15,23 @@ class CollectionViewCellH: UICollectionViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func prepareForReuse() {
+        super.prepareForReuse()
+        
         activityIndicator.startAnimating()
-    }
+      }
     
     func showImages(images: itemH){
-        imageView.image = UIImage()
-        DispatchQueue.global().async {
-            let url = URL(string: images.imageURL)
-            let data = try? Data(contentsOf: url!)
-            DispatchQueue.main.async {
-                self.activityIndicator.startAnimating()
-                self.imageView.image = UIImage(data: data!)
-                self.activityIndicator.stopAnimating()
-            }
-        }
-    }
-}
+          imageView.image = UIImage()
+          DispatchQueue.global().async {
+              let url = URL(string: images.imageURL)
+              let data = try? Data(contentsOf: url!)
+              DispatchQueue.main.async {
+                  self.activityIndicator.startAnimating()
+                  self.imageView.image = UIImage(data: data!)
+                  self.activityIndicator.stopAnimating()
+              }
+          }
+      }
+  }
+
+
