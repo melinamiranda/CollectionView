@@ -7,21 +7,22 @@
 //
 
 import UIKit
+import SafariServices
 
 struct item {
-    var label: String
-    var image: UIImage!
-    var url: String
+    var label:String
+    var image:UIImage!
+    var url:String
 }
 
 struct itemH{
-    var imageURL: String
+    var imageURL:String
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CollectionViewCellDelegate {
     
-    @IBOutlet weak var collectionViewV: UICollectionView!
-    @IBOutlet weak var collectionViewH: UICollectionView!
+    @IBOutlet weak var collectionViewV:UICollectionView!
+    @IBOutlet weak var collectionViewH:UICollectionView!
     var itemsArray = [item]()
     var itemsImageArray = [itemH]()
     
@@ -30,6 +31,9 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         collectionViewV.dataSource = self
         collectionViewH.dataSource = self
+        collectionViewV.delegate = self
+        collectionViewH.delegate = self
+        
         itemsArray = [
             item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
             item(label: "Instagram", image: UIImage(named: "InstagramLogo"),url: "https://www.instagram.com"),
@@ -46,6 +50,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         ]
     }
     
+    func bottonPressed(safariVc: SFSafariViewController) {
+           present(safariVc,animated: true)
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewV {
         return itemsArray.count
@@ -54,11 +62,13 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             return itemsImageArray.count
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == collectionViewV {
         let cell =  collectionViewV.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
             cell.urlString = itemsArray[indexPath.item].url
             cell.showItems(items: itemsArray[indexPath.item])
+            cell.delegate = self
             return cell
         }
         else {

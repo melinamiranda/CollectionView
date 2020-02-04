@@ -10,30 +10,29 @@ import Foundation
 import UIKit
 import SafariServices
 
+protocol CollectionViewCellDelegate {
+    func bottonPressed(safariVc: SFSafariViewController)
+}
+
 class CollectionViewCell: UICollectionViewCell, SFSafariViewControllerDelegate {
     
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var button: UIButton!
     var urlString = ""
+    var delegate:CollectionViewCellDelegate?
     
     @IBAction func openURL(_ sender: Any) {
-        let vc = UIViewController()
         let url = URL(string: urlString)
         let safariVC = SFSafariViewController(url: url!)
         safariVC.delegate = self
+        safariVC.modalPresentationStyle = .overFullScreen
         safariVC.dismissButtonStyle = .close
-        safariVC.modalPresentationStyle = .fullScreen
-        vc.present(safariVC, animated: true, completion: nil)
+        delegate?.bottonPressed(safariVc: safariVC)
     }
     
     func showItems(items: item) {
         labelName.text = items.label
         imageView.image = items.image
-    }
-    
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        let vc = UIViewController()
-        vc.dismiss(animated: true, completion: nil)
     }
 }
