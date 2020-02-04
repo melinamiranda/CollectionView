@@ -8,30 +8,24 @@
 
 import Foundation
 import UIKit
-import SafariServices
 
 protocol CollectionViewCellDelegate {
-    func bottonPressed(safariVc: SFSafariViewController)
+    func passURL(url: URL)
 }
 
-class CollectionViewCell: UICollectionViewCell, SFSafariViewControllerDelegate {
+class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var button: UIButton!
-    var urlString = ""
     var delegate:CollectionViewCellDelegate?
     
     @IBAction func openURL(_ sender: Any) {
-        let url = URL(string: urlString)
-        let safariVC = SFSafariViewController(url: url!)
-        safariVC.delegate = self
-        safariVC.modalPresentationStyle = .overFullScreen
-        safariVC.dismissButtonStyle = .close
-        delegate?.bottonPressed(safariVc: safariVC)
     }
     
     func showItems(items: item) {
+        let url = URL(string: items.url)
+        delegate?.passURL(url: url!)
         labelName.text = items.label
         imageView.image = items.image
     }

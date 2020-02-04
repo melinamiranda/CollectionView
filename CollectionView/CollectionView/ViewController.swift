@@ -15,11 +15,11 @@ struct item {
     var url:String
 }
 
-struct itemH{
+struct itemH {
     var imageURL:String
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CollectionViewCellDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, SFSafariViewControllerDelegate, CollectionViewCellDelegate {
     
     @IBOutlet weak var collectionViewV:UICollectionView!
     @IBOutlet weak var collectionViewH:UICollectionView!
@@ -31,8 +31,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         collectionViewV.dataSource = self
         collectionViewH.dataSource = self
-        collectionViewV.delegate = self
-        collectionViewH.delegate = self
         
         itemsArray = [
             item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
@@ -42,21 +40,29 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         ]
         itemsImageArray = [
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
-            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
-            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
-            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
-            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
-            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
+            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Nationaltheatret_Oslo_Front_at_Night.jpg"),
+            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/4/48/Moore_Street_market%2C_Dublin.jpg"),
+            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/28/The_Shore%2C_Leith.JPG"),
+            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/55/BrasiliaBanNacional.jpg"),
+            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Rangitoto_Island_North_Head.jpg"),
         ]
     }
     
-    func bottonPressed(safariVc: SFSafariViewController) {
-           present(safariVc,animated: true)
+    func passURL(url: URL) {
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.modalPresentationStyle = .overFullScreen
+        safariVC.dismissButtonStyle = .cancel
+        safariVC.delegate = self
+        present(safariVC,animated: true)
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true, completion: nil)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewV {
-        return itemsArray.count
+            return itemsArray.count
         }
         else {
             return itemsImageArray.count
@@ -66,9 +72,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == collectionViewV {
         let cell =  collectionViewV.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-            cell.urlString = itemsArray[indexPath.item].url
             cell.showItems(items: itemsArray[indexPath.item])
-            cell.delegate = self
+        
             return cell
         }
         else {

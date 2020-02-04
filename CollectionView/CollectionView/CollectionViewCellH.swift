@@ -17,6 +17,7 @@ class CollectionViewCellH: UICollectionViewCell {
     override func prepareForReuse() {
         activityIndicator.startAnimating()
     }
+    
     func showImages(images: itemH){
         imageView.image = UIImage()
         DispatchQueue.global().async {
