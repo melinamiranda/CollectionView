@@ -19,7 +19,7 @@ struct itemH {
     var imageURL:String
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource, SFSafariViewControllerDelegate, CollectionViewCellDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewControllerDelegate, CollectionViewCellDelegate {
     
     @IBOutlet weak var collectionViewV:UICollectionView!
     @IBOutlet weak var collectionViewH:UICollectionView!
@@ -53,13 +53,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, SFSafariView
         safariVC.modalPresentationStyle = .overFullScreen
         safariVC.dismissButtonStyle = .cancel
         safariVC.delegate = self
-        present(safariVC,animated: true)
+        
+        present(safariVC, animated: true, completion: nil)
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true, completion: nil)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewV {
             return itemsArray.count
@@ -73,7 +74,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, SFSafariView
         if collectionView == collectionViewV {
         let cell =  collectionViewV.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
             cell.showItems(items: itemsArray[indexPath.item])
-        
+            
             return cell
         }
         else {

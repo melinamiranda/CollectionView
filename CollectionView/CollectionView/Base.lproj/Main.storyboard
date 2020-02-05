@@ -45,7 +45,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="Visit Website"/>
                                                     <connections>
-                                                        <action selector="openURL:" destination="Thw-Eh-Lnk" eventType="touchUpInside" id="jcc-Vm-kDm"/>
+                                                        <action selector="openURL:" destination="Thw-Eh-Lnk" eventType="touchUpInside" id="jKm-vt-hCy"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCu-2m-XiP">
@@ -79,7 +79,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="button" destination="r8o-LZ-8a6" id="eBp-Xf-EuK"/>
-                                            <outlet property="imageView" destination="O9m-tD-zVn" id="utc-ml-C0J"/>
+                                            <outlet property="imageView" destination="O9m-tD-zVn" id="d6w-aa-pNw"/>
                                             <outlet property="labelName" destination="WCu-2m-XiP" id="cFr-xD-BNJ"/>
                                         </connections>
                                     </collectionViewCell>
@@ -130,7 +130,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="activityIndicator" destination="mQu-64-Cvz" id="C6d-Xi-EQi"/>
-                                            <outlet property="imageView" destination="uJ3-3E-aY0" id="uD1-yj-u9W"/>
+                                            <outlet property="imageView" destination="uJ3-3E-aY0" id="yfq-r7-Rcx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
