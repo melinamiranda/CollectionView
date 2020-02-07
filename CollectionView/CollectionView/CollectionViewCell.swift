@@ -22,7 +22,6 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var button:UIButton!
     var delegate:CollectionViewCellDelegate?
     
-    
     @IBAction func openURL(_ sender: UIButton){
         delegate?.openWebsite(cell: self)
     }

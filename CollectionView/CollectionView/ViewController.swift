@@ -66,7 +66,6 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
         let tappedIndexPath = collectionViewV.indexPath(for: cell)
         let cell = collectionViewV.cellForItem(at: tappedIndexPath!) as! CollectionViewCell
         cell.delegate?.passURL(url: URL(string: itemsArray[tappedIndexPath!.item].url)!)
-        cell.showItems(items: itemsArray[tappedIndexPath!.item])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -86,7 +85,7 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
             return cell
         }
         else {
-            let cell = collectionViewH.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellH", for: indexPath) as! CollectionViewCellH
+            let cell = collectionViewH.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell2", for: indexPath) as! CollectionViewCell2
             cell.showImages(images: itemsImageArray[indexPath.item])
             return cell
         }

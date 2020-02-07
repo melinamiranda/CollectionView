@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CollectionViewCellH: UICollectionViewCell {
+class CollectionViewCell2: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -19,19 +19,18 @@ class CollectionViewCellH: UICollectionViewCell {
         
         activityIndicator.startAnimating()
       }
-    
     func showImages(images: itemH){
-          imageView.image = UIImage()
-          DispatchQueue.global().async {
-              let url = URL(string: images.imageURL)
-              let data = try? Data(contentsOf: url!)
-              DispatchQueue.main.async {
-                  self.activityIndicator.startAnimating()
-                  self.imageView.image = UIImage(data: data!)
-                  self.activityIndicator.stopAnimating()
-              }
-          }
-      }
-  }
+        imageView.image = UIImage()
+        DispatchQueue.global().async {
+            let url = URL(string: images.imageURL)
+            let data = try? Data(contentsOf: url!)
+            DispatchQueue.main.async {
+                self.activityIndicator.startAnimating()
+                self.imageView.image = UIImage(data: data!)
+                self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+}
 
 
