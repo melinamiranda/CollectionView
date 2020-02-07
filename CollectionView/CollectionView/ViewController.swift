@@ -38,9 +38,10 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
             item(label: "Linkedin", image: UIImage(named: "LinkedinLogo"), url: "https://www.linkedin.com"),
             item(label: "Twitter", image: UIImage(named: "TwitterLogo"), url: "https://www.twitter.com"),
         ]
+        
         itemsImageArray = [
-            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
-            itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Nationaltheatret_Oslo_Front_at_Night.jpg"),
+            itemH(imageURL:"https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
+            itemH(imageURL:"https://upload.wikimedia.org/wikipedia/commons/8/8f/Nationaltheatret_Oslo_Front_at_Night.jpg"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/4/48/Moore_Street_market%2C_Dublin.jpg"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/28/The_Shore%2C_Leith.JPG"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/55/BrasiliaBanNacional.jpg"),
@@ -54,11 +55,18 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
         safariVC.dismissButtonStyle = .cancel
         safariVC.delegate = self
         
-        present(safariVC, animated: true, completion: nil)
+        present(safariVC,animated: true,completion: nil)
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func openWebsite(cell: UICollectionViewCell) {
+        let tappedIndexPath = collectionViewV.indexPath(for: cell)
+        let cell = collectionViewV.cellForItem(at: tappedIndexPath!) as! CollectionViewCell
+        cell.delegate?.passURL(url: URL(string: itemsArray[tappedIndexPath!.item].url)!)
+        cell.showItems(items: itemsArray[tappedIndexPath!.item])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,7 +82,7 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
         if collectionView == collectionViewV {
         let cell =  collectionViewV.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
             cell.showItems(items: itemsArray[indexPath.item])
-            
+            cell.delegate = self
             return cell
         }
         else {

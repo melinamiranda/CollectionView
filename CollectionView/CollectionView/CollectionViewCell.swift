@@ -8,10 +8,11 @@
 
 import Foundation
 import UIKit
-import SafariServices
+
 
 protocol CollectionViewCellDelegate {
     func passURL(url:URL)
+    func openWebsite(cell: UICollectionViewCell)
 }
 
 class CollectionViewCell: UICollectionViewCell {
@@ -21,14 +22,13 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var button:UIButton!
     var delegate:CollectionViewCellDelegate?
     
-    @IBAction func openURL(_ sender: UIButton) {
+    
+    @IBAction func openURL(_ sender: UIButton){
+        delegate?.openWebsite(cell: self)
     }
     
     func showItems(items: item) {
-        let url = URL(string: items.url)
-        delegate?.passURL(url: url!)
         labelName.text = items.label
         imageView.image = items.image
-        
     }
 }
