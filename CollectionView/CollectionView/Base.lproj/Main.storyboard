@@ -102,7 +102,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i9e-rJ-tmW" secondAttribute="top" constant="8" id="1Aa-kM-qVc"/>
-                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="height" relation="lessThanOrEqual" secondItem="i9e-rJ-tmW" secondAttribute="height" multiplier="8:9" id="Hi1-Mc-gec"/>
+                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="height" secondItem="i9e-rJ-tmW" secondAttribute="height" multiplier="8:9" id="Hi1-Mc-gec"/>
                                                 <constraint firstItem="mQu-64-Cvz" firstAttribute="centerY" secondItem="uJ3-3E-aY0" secondAttribute="centerY" id="MdE-8i-eys"/>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="width" secondItem="i9e-rJ-tmW" secondAttribute="width" multiplier="8:9" id="Mt2-mC-YW3"/>
                                                 <constraint firstAttribute="trailing" secondItem="uJ3-3E-aY0" secondAttribute="trailing" constant="8" id="VQA-x7-3Rd"/>

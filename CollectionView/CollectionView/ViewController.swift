@@ -45,6 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/28/The_Shore%2C_Leith.JPG"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/55/BrasiliaBanNacional.jpg"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Rangitoto_Island_North_Head.jpg"),
+
         ]
     }
     
@@ -77,8 +78,7 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == collectionView {
-        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell {
             cell.showItems(items: itemsArray[indexPath.item])
             cell.delegate = self
             return cell
