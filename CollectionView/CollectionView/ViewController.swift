@@ -21,16 +21,15 @@ struct itemH {
 
 class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewControllerDelegate, CollectionViewCellDelegate {
     
-    @IBOutlet weak var collectionViewV:UICollectionView!
-    @IBOutlet weak var collectionViewH:UICollectionView!
+    @IBOutlet weak var collectionView:UICollectionView!
+    
     var itemsArray = [item]()
     var itemsImageArray = [itemH]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionViewV.dataSource = self
-        collectionViewH.dataSource = self
+        collectionView.dataSource = self
         
         itemsArray = [
             item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
@@ -63,13 +62,13 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
     }
     
     func openWebsite(cell: UICollectionViewCell) {
-        let tappedIndexPath = collectionViewV.indexPath(for: cell)
-        let cell = collectionViewV.cellForItem(at: tappedIndexPath!) as! CollectionViewCell
+        let tappedIndexPath = collectionView.indexPath(for: cell)
+        let cell = collectionView.cellForItem(at: tappedIndexPath!) as! CollectionViewCell
         cell.delegate?.passURL(url: URL(string: itemsArray[tappedIndexPath!.item].url)!)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == collectionViewV {
+        if collectionView == collectionView {
             return itemsArray.count
         }
         else {
@@ -78,14 +77,14 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == collectionViewV {
-        let cell =  collectionViewV.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        if collectionView == collectionView {
+        let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
             cell.showItems(items: itemsArray[indexPath.item])
             cell.delegate = self
             return cell
         }
         else {
-            let cell = collectionViewH.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell2", for: indexPath) as! CollectionViewCell2
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell2", for: indexPath) as! CollectionViewCell2
             cell.showImages(images: itemsImageArray[indexPath.item])
             return cell
         }

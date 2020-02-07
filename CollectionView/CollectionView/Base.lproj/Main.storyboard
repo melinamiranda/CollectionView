@@ -120,7 +120,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CMc-3Y-SKO"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="W4J-zZ-QD8"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -134,7 +134,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="collectionViewV" destination="62x-nt-LQQ" id="A7Q-tT-sn5"/>
+                        <outlet property="collectionView" destination="62x-nt-LQQ" id="drA-PU-2JY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
