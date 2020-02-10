@@ -38,7 +38,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             item(label: "Twitter", image: UIImage(named: "TwitterLogo"), url: "https://www.twitter.com"),
 
         ]
-        
         itemsImageArray = [
             itemH(imageURL:"https://upload.wikimedia.org/wikipedia/commons/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg"),
             itemH(imageURL:"https://upload.wikimedia.org/wikipedia/commons/8/8f/Nationaltheatret_Oslo_Front_at_Night.jpg"),
@@ -70,7 +69,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return itemsArray.count
@@ -78,7 +77,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         else {
             return itemsImageArray.count
         }
-
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
@@ -95,6 +93,3 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
 }
-/*  s;c
-   [0,0]
-   [0,1] */
