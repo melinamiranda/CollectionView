@@ -39,7 +39,7 @@
                                                         <constraint firstAttribute="width" secondItem="O9m-tD-zVn" secondAttribute="height" multiplier="1:1" id="4za-CW-Amt"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-LZ-8a6">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-LZ-8a6">
                                                     <rect key="frame" x="198" y="49.5" width="79" height="28"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -58,6 +58,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="r8o-LZ-8a6" firstAttribute="leading" secondItem="O9m-tD-zVn" secondAttribute="trailing" constant="8" id="0hm-w8-Amj"/>
+                                                <constraint firstItem="WCu-2m-XiP" firstAttribute="width" relation="lessThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.277193" id="13E-EP-Moc"/>
                                                 <constraint firstItem="WCu-2m-XiP" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="1ms-db-6bc"/>
                                                 <constraint firstItem="WCu-2m-XiP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="5Sc-2y-1HH"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="width" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="1:3" id="Evu-32-uWH"/>
@@ -65,13 +66,11 @@
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="O9m-tD-zVn" secondAttribute="bottom" constant="8" id="GeS-ue-laC"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="leading" secondItem="WCu-2m-XiP" secondAttribute="trailing" constant="8" id="Gkb-zS-Hba"/>
                                                 <constraint firstItem="r8o-LZ-8a6" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="LKl-dD-XjC"/>
-                                                <constraint firstItem="WCu-2m-XiP" firstAttribute="width" relation="lessThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.285075" id="LhU-aA-flX"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="height" secondItem="dvo-wm-Of4" secondAttribute="height" multiplier="3:4" id="MqG-W2-g45"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="OxE-D1-zZl"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r8o-LZ-8a6" secondAttribute="bottom" constant="8" id="Twh-pS-ueB"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="centerX" secondItem="dvo-wm-Of4" secondAttribute="centerX" id="VwS-jP-kVJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="r8o-LZ-8a6" secondAttribute="trailing" constant="8" id="W28-fZ-Yxq"/>
-                                                <constraint firstItem="r8o-LZ-8a6" firstAttribute="width" relation="lessThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.277193" id="W4d-k2-RAF"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="bY4-em-mom"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WCu-2m-XiP" secondAttribute="bottom" constant="8" id="kl0-4l-rcP"/>
                                                 <constraint firstItem="r8o-LZ-8a6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="rZf-Xo-M5C"/>
