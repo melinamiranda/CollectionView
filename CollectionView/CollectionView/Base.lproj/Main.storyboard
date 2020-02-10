@@ -84,31 +84,31 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CollectionViewCell2" id="B0M-IH-eWs" customClass="CollectionViewCell2" customModule="CollectionView" customModuleProvider="target">
-                                        <rect key="frame" x="135" y="142.5" width="144" height="144"/>
+                                        <rect key="frame" x="151" y="142.5" width="112" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="i9e-rJ-tmW">
-                                            <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJ3-3E-aY0">
-                                                    <rect key="frame" x="8" y="8" width="128" height="128"/>
+                                                    <rect key="frame" x="8" y="8" width="96" height="96"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uJ3-3E-aY0" secondAttribute="height" multiplier="1:1" id="cDF-uS-gRP"/>
                                                     </constraints>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-64-Cvz">
-                                                    <rect key="frame" x="53.5" y="53.5" width="37" height="37"/>
+                                                    <rect key="frame" x="37.5" y="37.5" width="37" height="37"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i9e-rJ-tmW" secondAttribute="top" constant="8" id="1Aa-kM-qVc"/>
-                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="height" secondItem="i9e-rJ-tmW" secondAttribute="height" multiplier="8:9" id="Hi1-Mc-gec"/>
+                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="top" secondItem="i9e-rJ-tmW" secondAttribute="top" constant="8" id="1Aa-kM-qVc"/>
+                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="height" relation="greaterThanOrEqual" secondItem="i9e-rJ-tmW" secondAttribute="height" multiplier="6:7" id="Hi1-Mc-gec"/>
                                                 <constraint firstItem="mQu-64-Cvz" firstAttribute="centerY" secondItem="uJ3-3E-aY0" secondAttribute="centerY" id="MdE-8i-eys"/>
-                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="width" secondItem="i9e-rJ-tmW" secondAttribute="width" multiplier="8:9" id="Mt2-mC-YW3"/>
+                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="width" relation="lessThanOrEqual" secondItem="i9e-rJ-tmW" secondAttribute="width" multiplier="6:7" id="Mt2-mC-YW3"/>
                                                 <constraint firstAttribute="trailing" secondItem="uJ3-3E-aY0" secondAttribute="trailing" constant="8" id="VQA-x7-3Rd"/>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="centerY" secondItem="i9e-rJ-tmW" secondAttribute="centerY" id="X0K-Mg-XpW"/>
                                                 <constraint firstItem="mQu-64-Cvz" firstAttribute="centerX" secondItem="uJ3-3E-aY0" secondAttribute="centerX" id="Y0d-eG-rNV"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uJ3-3E-aY0" secondAttribute="bottom" constant="8" id="mVz-sO-7Fr"/>
+                                                <constraint firstAttribute="bottom" secondItem="uJ3-3E-aY0" secondAttribute="bottom" constant="8" id="mVz-sO-7Fr"/>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="leading" secondItem="i9e-rJ-tmW" secondAttribute="leading" constant="8" id="mvs-7c-QIK"/>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="centerX" secondItem="i9e-rJ-tmW" secondAttribute="centerX" id="w0j-9k-Ro1"/>
                                             </constraints>
