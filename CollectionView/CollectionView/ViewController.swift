@@ -19,7 +19,7 @@ struct itemH {
     var imageURL:String
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewControllerDelegate, CollectionViewCellDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SFSafariViewControllerDelegate, CollectionViewCellDelegate {
     
     @IBOutlet weak var collectionView:UICollectionView!
     
@@ -30,12 +30,13 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
         super.viewDidLoad()
         
         collectionView.dataSource = self
-        
+        collectionView.delegate = self
         itemsArray = [
             item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
             item(label: "Instagram", image: UIImage(named: "InstagramLogo"),url: "https://www.instagram.com"),
             item(label: "Linkedin", image: UIImage(named: "LinkedinLogo"), url: "https://www.linkedin.com"),
             item(label: "Twitter", image: UIImage(named: "TwitterLogo"), url: "https://www.twitter.com"),
+
         ]
         
         itemsImageArray = [
@@ -45,8 +46,9 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/28/The_Shore%2C_Leith.JPG"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/55/BrasiliaBanNacional.jpg"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Rangitoto_Island_North_Head.jpg"),
-
         ]
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+        collectionView.register(CollectionViewCell2.self, forCellWithReuseIdentifier: "CollectionViewCell2")
     }
     
     func passURL(url: URL) {
@@ -54,7 +56,6 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
         safariVC.modalPresentationStyle = .overFullScreen
         safariVC.dismissButtonStyle = .cancel
         safariVC.delegate = self
-        
         present(safariVC,animated: true,completion: nil)
     }
     
@@ -69,19 +70,19 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == collectionView {
+        if section == 0 {
             return itemsArray.count
         }
         else {
             return itemsImageArray.count
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell {
-            cell.showItems(items: itemsArray[indexPath.item])
-            cell.delegate = self
-            return cell
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+                cell.showItems(items: itemsArray[indexPath.item])
+                cell.delegate = self
+                return cell
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell2", for: indexPath) as! CollectionViewCell2
@@ -90,3 +91,6 @@ class ViewController: UIViewController, UICollectionViewDataSource,SFSafariViewC
         }
     }
 }
+/*  s;c
+   [0,0]
+   [0,1] */
