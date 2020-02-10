@@ -15,7 +15,7 @@ protocol CollectionViewCellDelegate {
     func openWebsite(cell: UICollectionViewCell)
 }
 
-class CollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
     
     @IBOutlet weak var labelName:UILabel!
     @IBOutlet weak var imageView:UIImageView!

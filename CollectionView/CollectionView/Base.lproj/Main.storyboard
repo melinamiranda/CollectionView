@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62x-nt-LQQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="292"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="ujt-Zo-cJR">
                                     <size key="itemSize" width="335" height="150"/>
@@ -128,7 +128,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="62x-nt-LQQ" secondAttribute="trailing" id="8q8-SO-84I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="62x-nt-LQQ" secondAttribute="bottom" constant="526" id="NJA-V1-iAZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="62x-nt-LQQ" secondAttribute="bottom" constant="200" id="NJA-V1-iAZ"/>
                             <constraint firstItem="62x-nt-LQQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YsV-5v-SQ8"/>
                             <constraint firstItem="62x-nt-LQQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tPL-qF-NP2"/>
                         </constraints>

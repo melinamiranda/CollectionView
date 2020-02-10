@@ -47,8 +47,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/55/BrasiliaBanNacional.jpg"),
             itemH(imageURL: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Rangitoto_Island_North_Head.jpg"),
         ]
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
-        collectionView.register(CollectionViewCell2.self, forCellWithReuseIdentifier: "CollectionViewCell2")
     }
     
     func passURL(url: URL) {
@@ -69,6 +67,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.delegate?.passURL(url: URL(string: itemsArray[tappedIndexPath!.item].url)!)
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return itemsArray.count
@@ -76,13 +78,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         else {
             return itemsImageArray.count
         }
+
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-                cell.showItems(items: itemsArray[indexPath.item])
-                cell.delegate = self
-                return cell
+            cell.showItems(items: itemsArray[indexPath.item])
+            cell.delegate = self
+            return cell
+            
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell2", for: indexPath) as! CollectionViewCell2
