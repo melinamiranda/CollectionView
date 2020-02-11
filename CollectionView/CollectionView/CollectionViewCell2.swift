@@ -16,7 +16,7 @@ class CollectionViewCell2: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
+       
         imageView.image = nil
     }
     
@@ -24,7 +24,6 @@ class CollectionViewCell2: UICollectionViewCell {
         activityIndicator.startAnimating()
         DispatchQueue.global().async {
             let url = URL(string: images.imageURL)
-            let task = URLSession.shared.dataTask(with: url!)
             if let data = try? Data(contentsOf: url!) {
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
@@ -32,7 +31,6 @@ class CollectionViewCell2: UICollectionViewCell {
                     self.activityIndicator.stopAnimating()
                 }
             }
-            task.resume()
         }
     }
 }

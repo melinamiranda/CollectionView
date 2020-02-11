@@ -20,8 +20,10 @@ struct itemH {
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SFSafariViewControllerDelegate, CollectionViewCellDelegate {
-    
+   
     @IBOutlet weak var collectionView:UICollectionView!
+    weak var prefetchDataSource: UICollectionViewDataSourcePrefetching?
+
     
     var itemsArray = [item]()
     var itemsImageArray = [itemH]()
@@ -31,6 +33,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
         itemsArray = [
             item(label: "Facebook", image: UIImage(named: "FacebookLogo"), url: "https://www.facebook.com"),
             item(label: "Instagram", image: UIImage(named: "InstagramLogo"),url: "https://www.instagram.com"),
@@ -69,7 +72,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
-
+       
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return itemsArray.count
