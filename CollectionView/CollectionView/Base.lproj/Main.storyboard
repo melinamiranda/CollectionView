@@ -138,18 +138,23 @@
                                         <constraint firstItem="Vnd-CI-nDy" firstAttribute="centerY" secondItem="Hng-Mq-Q6V" secondAttribute="centerY" id="xqS-xG-yGd"/>
                                     </constraints>
                                 </collectionReusableView>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H6L-fw-WZ2">
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ReusableFooter" id="H6L-fw-WZ2">
                                     <rect key="frame" x="0.0" y="292.5" width="414" height="30"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJL-pQ-Bo6">
-                                            <rect key="frame" x="186" y="4" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Footer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJL-pQ-Bo6">
+                                            <rect key="frame" x="8" y="8" width="398" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="QJL-pQ-Bo6" secondAttribute="bottom" constant="8" id="5Jl-Wp-7mK"/>
+                                        <constraint firstItem="QJL-pQ-Bo6" firstAttribute="top" secondItem="H6L-fw-WZ2" secondAttribute="top" constant="8" id="dNE-xI-xcc"/>
+                                        <constraint firstItem="QJL-pQ-Bo6" firstAttribute="leading" secondItem="H6L-fw-WZ2" secondAttribute="leading" constant="8" id="f82-u8-x6S"/>
+                                        <constraint firstAttribute="trailing" secondItem="QJL-pQ-Bo6" secondAttribute="trailing" constant="8" id="wbT-am-sUR"/>
+                                    </constraints>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="W4J-zZ-QD8"/>
