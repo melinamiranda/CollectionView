@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62x-nt-LQQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="2" id="ujt-Zo-cJR">
                                     <size key="itemSize" width="335" height="150"/>
@@ -36,10 +36,10 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-tD-zVn">
                                                     <rect key="frame" x="95" y="16" width="95" height="94.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="O9m-tD-zVn" secondAttribute="height" multiplier="1:1" id="4za-CW-Amt"/>
+                                                        <constraint firstAttribute="width" secondItem="O9m-tD-zVn" secondAttribute="height" multiplier="1:1" id="rfX-1d-6OE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-LZ-8a6">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-LZ-8a6">
                                                     <rect key="frame" x="198" y="49.5" width="79" height="28"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -48,7 +48,7 @@
                                                         <action selector="openURL:" destination="Thw-Eh-Lnk" eventType="touchUpInside" id="jKm-vt-hCy"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCu-2m-XiP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCu-2m-XiP">
                                                     <rect key="frame" x="8" y="55" width="79" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,9 +63,9 @@
                                                 <constraint firstItem="r8o-LZ-8a6" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="Emq-l4-qvB"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="width" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="1:3" id="Evu-32-uWH"/>
                                                 <constraint firstItem="WCu-2m-XiP" firstAttribute="leading" secondItem="dvo-wm-Of4" secondAttribute="leading" constant="8" id="Gc2-27-klt"/>
+                                                <constraint firstItem="r8o-LZ-8a6" firstAttribute="width" relation="lessThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.277193" id="GeP-zF-EYp"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="O9m-tD-zVn" secondAttribute="bottom" constant="8" id="GeS-ue-laC"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="leading" secondItem="WCu-2m-XiP" secondAttribute="trailing" constant="8" id="Gkb-zS-Hba"/>
-                                                <constraint firstItem="WCu-2m-XiP" firstAttribute="width" relation="lessThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.277193" id="Lex-Wp-S86"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="height" secondItem="dvo-wm-Of4" secondAttribute="height" multiplier="3:4" id="MqG-W2-g45"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="OxE-D1-zZl"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r8o-LZ-8a6" secondAttribute="bottom" constant="8" id="Twh-pS-ueB"/>
@@ -73,6 +73,7 @@
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="centerY" secondItem="dvo-wm-Of4" secondAttribute="centerY" id="bY4-em-mom"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WCu-2m-XiP" secondAttribute="bottom" constant="8" id="kl0-4l-rcP"/>
                                                 <constraint firstItem="O9m-tD-zVn" firstAttribute="centerX" secondItem="dvo-wm-Of4" secondAttribute="centerX" id="m8y-dp-5Ob"/>
+                                                <constraint firstItem="WCu-2m-XiP" firstAttribute="width" relation="lessThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="width" multiplier="0.277193" id="mjT-5u-YrK"/>
                                                 <constraint firstItem="r8o-LZ-8a6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dvo-wm-Of4" secondAttribute="top" constant="8" id="rZf-Xo-M5C"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -89,7 +90,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJ3-3E-aY0">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJ3-3E-aY0">
                                                     <rect key="frame" x="8" y="8" width="112" height="112"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uJ3-3E-aY0" secondAttribute="height" multiplier="1:1" id="cDF-uS-gRP"/>
@@ -100,13 +101,13 @@
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="top" secondItem="i9e-rJ-tmW" secondAttribute="top" constant="8" id="1Aa-kM-qVc"/>
+                                                <constraint firstItem="uJ3-3E-aY0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i9e-rJ-tmW" secondAttribute="top" constant="8" id="1Aa-kM-qVc"/>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="height" secondItem="i9e-rJ-tmW" secondAttribute="height" multiplier="7:8" id="Hi1-Mc-gec"/>
                                                 <constraint firstItem="mQu-64-Cvz" firstAttribute="centerY" secondItem="uJ3-3E-aY0" secondAttribute="centerY" id="MdE-8i-eys"/>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="width" secondItem="i9e-rJ-tmW" secondAttribute="width" multiplier="7:8" id="Mt2-mC-YW3"/>
                                                 <constraint firstAttribute="trailing" secondItem="uJ3-3E-aY0" secondAttribute="trailing" constant="8" id="VQA-x7-3Rd"/>
                                                 <constraint firstItem="mQu-64-Cvz" firstAttribute="centerX" secondItem="uJ3-3E-aY0" secondAttribute="centerX" id="Y0d-eG-rNV"/>
-                                                <constraint firstAttribute="bottom" secondItem="uJ3-3E-aY0" secondAttribute="bottom" constant="8" id="mVz-sO-7Fr"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uJ3-3E-aY0" secondAttribute="bottom" constant="8" id="mVz-sO-7Fr"/>
                                                 <constraint firstItem="uJ3-3E-aY0" firstAttribute="leading" secondItem="i9e-rJ-tmW" secondAttribute="leading" constant="8" id="mvs-7c-QIK"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -125,7 +126,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="62x-nt-LQQ" secondAttribute="trailing" id="8q8-SO-84I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="62x-nt-LQQ" secondAttribute="bottom" constant="100" id="NJA-V1-iAZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="62x-nt-LQQ" secondAttribute="bottom" constant="200" id="NJA-V1-iAZ"/>
                             <constraint firstItem="62x-nt-LQQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YsV-5v-SQ8"/>
                             <constraint firstItem="62x-nt-LQQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tPL-qF-NP2"/>
                         </constraints>
@@ -137,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386.95652173913044" y="26.785714285714285"/>
+            <point key="canvasLocation" x="289.85507246376812" y="-90.401785714285708"/>
         </scene>
     </scenes>
 </document>

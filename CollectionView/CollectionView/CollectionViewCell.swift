@@ -29,5 +29,6 @@ class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
     func showItems(items: item) {
         labelName.text = items.label
         imageView.image = items.image
+        
     }
 }

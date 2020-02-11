@@ -17,18 +17,22 @@ class CollectionViewCell2: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        activityIndicator.startAnimating()
+        imageView.image = nil
     }
+    
     func showImages(images: itemH){
-        imageView.image = UIImage()
+        activityIndicator.startAnimating()
         DispatchQueue.global().async {
             let url = URL(string: images.imageURL)
-            let data = try? Data(contentsOf: url!)
-            DispatchQueue.main.async {
-                self.activityIndicator.startAnimating()
-                self.imageView.image = UIImage(data: data!)
-                self.activityIndicator.stopAnimating()
+            let task = URLSession.shared.dataTask(with: url!)
+            if let data = try? Data(contentsOf: url!) {
+                let image = UIImage(data: data)
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                    self.activityIndicator.stopAnimating()
+                }
             }
+            task.resume()
         }
     }
 }
