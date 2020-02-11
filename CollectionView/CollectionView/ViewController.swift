@@ -22,6 +22,7 @@ struct itemH {
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SFSafariViewControllerDelegate, CollectionViewCellDelegate {
    
     @IBOutlet weak var collectionView:UICollectionView!
+    
     weak var prefetchDataSource: UICollectionViewDataSourcePrefetching?
 
     
@@ -72,7 +73,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
-       
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ReusableHeader", for: indexPath)
+        return headerView
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return itemsArray.count
@@ -81,7 +87,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             return itemsImageArray.count
         }
     }
-    
+  
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell

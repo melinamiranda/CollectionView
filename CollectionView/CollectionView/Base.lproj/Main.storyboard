@@ -22,13 +22,13 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="ujt-Zo-cJR">
                                     <size key="itemSize" width="335" height="150"/>
                                     <size key="estimatedItemSize" width="335" height="150"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <size key="headerReferenceSize" width="0.0" height="30"/>
+                                    <size key="footerReferenceSize" width="0.0" height="30"/>
+                                    <inset key="sectionInset" minX="30" minY="8" maxX="30" maxY="8"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CollectionViewCell" id="Thw-Eh-Lnk" customClass="CollectionViewCell" customModule="CollectionView" customModuleProvider="target">
-                                        <rect key="frame" x="64.5" y="8" width="285" height="126.5"/>
+                                        <rect key="frame" x="64.5" y="38" width="285" height="126.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dvo-wm-Of4">
                                             <rect key="frame" x="0.0" y="0.0" width="285" height="126.5"/>
@@ -85,7 +85,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CollectionViewCell2" id="B0M-IH-eWs" customClass="CollectionViewCell2" customModule="CollectionView" customModuleProvider="target">
-                                        <rect key="frame" x="151" y="142.5" width="112" height="112"/>
+                                        <rect key="frame" x="151" y="172.5" width="112" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i9e-rJ-tmW">
                                             <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
@@ -118,6 +118,39 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ReusableHeader" id="Hng-Mq-Q6V">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-CI-nDy">
+                                            <rect key="frame" x="8" y="8" width="398" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Vnd-CI-nDy" secondAttribute="bottom" constant="8" id="Bvb-2s-QCs"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vnd-CI-nDy" secondAttribute="trailing" constant="8" id="YDr-Qt-3mp"/>
+                                        <constraint firstItem="Vnd-CI-nDy" firstAttribute="top" secondItem="Hng-Mq-Q6V" secondAttribute="top" constant="8" id="cRi-TD-pTT"/>
+                                        <constraint firstItem="Vnd-CI-nDy" firstAttribute="leading" secondItem="Hng-Mq-Q6V" secondAttribute="leading" constant="8" id="lXg-KZ-6BH"/>
+                                        <constraint firstItem="Vnd-CI-nDy" firstAttribute="centerY" secondItem="Hng-Mq-Q6V" secondAttribute="centerY" id="xqS-xG-yGd"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H6L-fw-WZ2">
+                                    <rect key="frame" x="0.0" y="292.5" width="414" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJL-pQ-Bo6">
+                                            <rect key="frame" x="186" y="4" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="W4J-zZ-QD8"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="u4z-yK-WSC"/>
