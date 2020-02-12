@@ -21,6 +21,7 @@ class CollectionViewCell2: UICollectionViewCell {
     }
     
     func showImages(images: itemH){
+        imageView.layer.cornerRadius = 3
         activityIndicator.startAnimating()
         DispatchQueue.global().async {
             let url = URL(string: images.imageURL)

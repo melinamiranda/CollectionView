@@ -28,7 +28,7 @@ class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate {
     
     func showItems(items: item) {
         labelName.text = items.label
+        imageView.layer.cornerRadius = 3
         imageView.image = items.image
-        
     }
 }
