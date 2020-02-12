@@ -22,10 +22,7 @@ struct itemH {
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SFSafariViewControllerDelegate, CollectionViewCellDelegate {
    
     @IBOutlet weak var collectionView:UICollectionView!
-    
     weak var prefetchDataSource: UICollectionViewDataSourcePrefetching?
-
-    
     var itemsArray = [item]()
     var itemsImageArray = [itemH]()
     
@@ -85,6 +82,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             return footerView
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return itemsArray.count
